@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'market/css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'market/css/media.css' %}" />
+    <link rel="stylesheet" href="{% static 'market/css/loading.css' %}" />
+    <title>Top GS {% block title %} {% endblock %}</title>
+</head>
+<body>
+    <div class="navbar">
+        <h2 class="logo">TOP GS</h2>
+        <nav class="nav-menu">
+            <ul class="nav-items">
+                <li class="nav-link"><a href='/'>Home</a></li>
+                <li class="nav-link"><a href='/health'>Health & Fitness</a></li>
+                <li class="nav-link"><a href='/lifestyle'>Lifestyle</a></li>
+                <li class="nav-link"><a href='/articles'>Articles</a></li>
+            </ul>
+        </nav>
+        <nav id="respMenu">
+            <span class="close-btn" onclick="dropDown()"><img src="{% static 'market/icons/close.png' %}" alt="dropdown icon"> </span>
+            <ul class="resp-nav-items">
+                <li class="nav-link"><a onclick="dropDown()" href='/'>Home</a></li>
+                <li class="nav-link"><a onclick="dropDown()" href='/health'>Health & Fitness</a></li>
+                <li class="nav-link"><a onclick="dropDown()" href='/lifestyle'>Lifestyle</a></li>
+                <li class="nav-link"><a onclick="dropDown()" href='/articles'>Articles</a></li>
+                <h4><a class="resp-sign-in" href="/sign-in" id="signIn">Sign In</a></h4>
+            </ul>
+        </nav>
+        <!-- <div class="search-box">
+            <input class="searchbox" type="search" name="search" id="searchBox" placeholder="Search...">
+        </div> -->
+        <h4><a class="sign-in" href="/sign-in" id="signIn">Sign In</a></h4>
+        <span class="dropdown" onclick="dropDown()"><img src="{% static 'market/icons/menu.png' %}" alt="dropdown icon"> </span>
+    </div>
+    {% block content %}
+    {% endblock %}
+    <script src="{% static 'market/js/script.js' %}"></script>
+</body>
+</html>

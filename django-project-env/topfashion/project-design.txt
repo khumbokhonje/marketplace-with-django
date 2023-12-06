@@ -1,0 +1,16 @@
+Main pages:
+    1. Home
+    2. Sale
+        a. Electronics and Accesories
+        b. Mens clothes
+        c. Mens shoes
+    3. Lifestyle
+    4. Health and Fitness
+    5. Beauty
+
+
+Django API REST framework
+
+
+React Frontend 
+    1. It should be a multipage site

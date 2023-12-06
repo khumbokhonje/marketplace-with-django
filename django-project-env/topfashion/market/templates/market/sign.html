@@ -1,0 +1,59 @@
+{% extends 'market/layout.html' %}
+{% block title %}: Sign in {% endblock %}
+{% block content %}
+<div class="box">
+    <div id="loginForm" class="container">
+        <div class="top-header">
+            <header>Login</header>
+        </div>
+        <div class="input-field"><input type="text" name="imput" class="input" placeholder="Email address or username" required></div>
+        <div class="input-field"><input type="password" name="imput" class="input" placeholder="Password" required></div>
+        <div class="input-field"><input type="submit" value="Login" class="submit"></div>
+
+        <div class="top-header">
+            <div class="left"><input title="Remember" type="checkbox" id="checkMe"><label for="check"> Remember me</label></div>
+            <div class="right"><label><a href="#">Forgot Password</a></label></div>
+        </div>
+        <div class="foot" onclick="switchForm()">
+            Don't have an account? Create One
+        </div>
+    </div>
+    <div id="createForm" class="create-form">
+        <div class="top-header">
+            <header>Setting up an account</header>
+        </div>
+        <div class="input-field">
+            <label for="username">Username</label>
+            <input title="Username" maxlength="30" type="text" name="username" class="input" required>
+        </div>
+        <div class="input-field">
+            <label for="firstname">First Name</label>
+            <input title="First name" maxlength="30" type="text" name="firstname" class="input" required>
+        </div>
+        <div class="input-field">
+            <label for="lastname">Last Name</label>
+            <input title="Last name" maxlength="30" type="text" name="lastname" class="input" required>
+        </div>
+        <div class="input-field">
+            <label for="email">Email address</label>
+            <input title="Email address" maxlength="50" type="text" name="email" class="input" required>
+        </div>
+        <div class="input-field">
+            <label for="password">Password</label>
+            <input title="Password" maxlength="50" type="password" minlength="8" name="password" class="input" placeholder="Enter a password at-least 8 characters" required>
+        </div>
+        <div class="input-field">
+            <label for="confirm-password">Confirm password</label>
+            <input title="Password" maxlength="50" type="password" minlength="8" name="confirm-password" class="input" placeholder="Re-enter your password" required>
+        </div>
+        <div class="input-field"><input type="submit" value="Create Account" class="submit"></div>
+
+        <div class="top-header">
+            <div class="left"><input type="checkbox" id="check"><label for="check"> Remember me</label></div>
+        </div>
+        <div class="foot" onclick="switchForm()">
+            Already have an account? Log In
+        </div>
+    </div>
+</div>
+{% endblock %}
